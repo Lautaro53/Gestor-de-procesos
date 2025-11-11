@@ -1,0 +1,1 @@
+savedcmd_/home/lautaro/laboratorio2025/modulo_kernel/Module.symvers :=  scripts/mod/modpost -M -m       -o /home/lautaro/laboratorio2025/modulo_kernel/Module.symvers -n -T /home/lautaro/laboratorio2025/modulo_kernel/modules.order -i Module.symvers -e 
