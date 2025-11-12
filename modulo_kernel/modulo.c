@@ -4,9 +4,9 @@
 #include <linux/kmod.h>   // Para call_usermodehelper
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("Equipo 2");
-MODULE_DESCRIPTION("Primer módulo de kernel con integración a Telegram");
-MODULE_VERSION("1.1");
+MODULE_AUTHOR("Equipo 13");
+MODULE_DESCRIPTION("Segundo módulo de kernel con integración a Telegram");
+MODULE_VERSION("1.2");
 
 static char *path_script = "/home/lautaro/laboratorio2025/modulo_kernel/send_telegram.sh";
 
@@ -24,7 +24,7 @@ static void enviar_mensaje_telegram(const char *mensaje) {
 
 // Al cargar el módulo
 static int __init modulo2_init(void) {
-    const char *mensaje = "Saludos desde el primer modulo de kernel creado por el equipo 2 para el laboratorio 1 de Sistemas Operativos 2025";
+    const char *mensaje = "Saludos desde el segundo modulo de kernel creado por el equipo 13 para el laboratorio 1 de Sistemas Operativos 2025";
     printk(KERN_INFO "%s\n", mensaje);
     enviar_mensaje_telegram(mensaje);
     return 0;
@@ -32,7 +32,7 @@ static int __init modulo2_init(void) {
 
 // Al descargar el módulo
 static void __exit modulo2_exit(void) {
-    const char *mensaje = "El primer modulo de kernel creado por el equipo 2 para el laboratorio 2 de Sistemas Operativos 2025 se encuentra descargado";
+    const char *mensaje = "El segundo modulo de kernel creado por el equipo 13 para el laboratorio 2 de Sistemas Operativos 2025 se encuentra descargado";
     printk(KERN_INFO "%s\n", mensaje);
     enviar_mensaje_telegram(mensaje);
 }

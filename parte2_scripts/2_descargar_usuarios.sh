@@ -16,14 +16,13 @@ CARPETA_IMAGENES="imagenes_usuarios"
 if [ -z "$TELEGRAM_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
     echo "Error: debe exportar TELEGRAM_TOKEN y TELEGRAM_CHAT_ID antes de ejecutar."
     echo "Ejemplo:"
-    echo "  export TELEGRAM_TOKEN=\"123456:ABC...\""
-    echo "  export TELEGRAM_CHAT_ID=\"-999999999\""
+    echo "  export TELEGRAM_TOKEN=\"8389227483:AAH8nG_kJ0Ql31-17ynvSzLU-NYBqEyV-58\""
+    echo "  export TELEGRAM_CHAT_ID=\"-1003403977612\""
     exit 1
 fi
 
 # Crear carpeta y archivo CSV
-mkdir -p "$CARPETA_IMAGENES"
-echo "usuario,contraseña,nombre,apellido,email,ciudad,imagen" > "$CSV"
+echo "usuario,contraseña,nombre,apellido,email,ciudad,imagen" >> "$CSV"
 
 echo "Descargando $N usuarios desde randomuser.me..."
 for ((i=1; i<=N; i++)); do

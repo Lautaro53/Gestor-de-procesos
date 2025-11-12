@@ -29,7 +29,7 @@ echo "Descarga finalizada. Buscando token '$TOKEN' ..."
 
 # Busca el Token
 if grep -R "$TOKEN" . > /dev/null 2>&1; then
-    echo "oken encontrado. Eliminando archivos descargados del dominio $DOMINIO..."
+    echo "Token encontrado. Eliminando archivos descargados del dominio $DOMINIO..."
     cd ..
     rm -rf "$CARPETA"
     echo "Archivos eliminados correctamente."
